@@ -24,8 +24,10 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -68,8 +70,8 @@ public class SeMethods extends Reporter implements WdMethods{
 					System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 					driver = new ChromeDriver();
 				}else {
-					/*System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
-					driver = new FirefoxDriver();*/
+					System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
+					driver = new SafariDriver();
 				}
 			}
 			driver.manage().window().maximize();
