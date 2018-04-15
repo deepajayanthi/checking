@@ -146,7 +146,7 @@ public class SeMethods extends Reporter implements WdMethods{
 			wait.until(ExpectedConditions.elementToBeClickable(ele));	
 			text = ele.getText();
 			ele.click();			
-			reportStep("The element :"+text+"  is clicked.", "PASS",false);
+			//reportStep("The element :"+text+"  is clicked.", "PASS",false);
 		} catch (InvalidElementStateException e) {
 			reportStep("The element: "+text+" could not be clicked", "FAIL",false);
 		} catch (WebDriverException e) {
